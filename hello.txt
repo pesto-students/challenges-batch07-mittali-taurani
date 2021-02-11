@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+Hello World!
+Change to commit for annotated tag
+=======
+Hello World
+>>>>>>> feature
