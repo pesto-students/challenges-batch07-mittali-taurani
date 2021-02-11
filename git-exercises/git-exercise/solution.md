@@ -4,7 +4,6 @@ Checked the status of the files using "git status" and observed the untracked fi
 Added the untracked file to the Git staging area using "git add  locations.txt", checked the status again, and saw the file is in the "Changes to be committed" area.Checked the objects (key/value) pairs using "tree.com .git".Committed the file using "git commit -m 'Create a simple commit, add a text file'".
 2. Checked the details for the object with key '8a89da7' which has the type 'commit' using "git cat-file -t 8a89da7" and "git cat-file -p 8a89da7" gives back the details about the author like the name and timestamp also committer details and timestamp of the commit.
 3. Using "git ls-files -s" check that the edited and newly created files were there in the staging area, it included files that have been committed but not moved to the remote repository.
-
 4. Used "git reset" to unstaged the changes in the files.
 5. Observed logs of the repository using the "git log" main command and also learned various options to limit the result.
 6. Tried merging a new branch feature to the solutions-git-exercise which created conflict while auto-merging. Solved by add file and again commit.
