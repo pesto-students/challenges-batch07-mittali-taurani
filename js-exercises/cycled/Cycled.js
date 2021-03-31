@@ -31,10 +31,8 @@ class Cycled {
   }
 
   set index(value) {
-    if (value >= 0 && value <= this.iteratingArray.length - 1) {
-      this.currentIndex = value;
-    } else {
-      this.currentIndex = this.iteratingArray.length - 1;
+    if (value >= 0) {
+      this.currentIndex = value % this.iteratingArray.length;
     }
   }
 
@@ -48,12 +46,11 @@ class Cycled {
   }
 
   * [Symbol.iterator]() {
-    let iterator = this.iteratingArray.length - 1;
-    this.currentIndex = 0;
-    while (iterator >= 0) {
+    let length = this.iteratingArray.length - 1;
+    while (length >= 0) {
       yield this.current();
-      this.currentIndex += 1;
-      iterator -= 1;
+      this.index = this.currentIndex + 1;
+      length -= 1;
     }
   }
 }
