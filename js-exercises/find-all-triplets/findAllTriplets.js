@@ -16,7 +16,7 @@ function findAllTriplets(arr, sum) {
     }
   }
 
-  return resultArray;
+  return Array.from(new Set(resultArray.map(JSON.stringify))).map(JSON.parse);
 }
 
 function validator(arr, sum) {
